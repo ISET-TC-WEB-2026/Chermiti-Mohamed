@@ -1,0 +1,638 @@
+/* Réglages généraux */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: #333333;
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: #d35400;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.conteneur {
+    width: 92%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.contenu-page {
+    padding: 40px 0;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.section-claire {
+    background-color: #f4f4f4;
+}
+
+.surtitre {
+    margin-bottom: 8px;
+    color: #d35400;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.intro-section {
+    margin-bottom: 28px;
+    color: #666666;
+}
+
+/* En-tête et navigation */
+.entete {
+    background-color: #2c3e50;
+    border-bottom: 4px solid #d35400;
+}
+
+.barre-entete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.marque {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.marque img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+}
+
+.navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 8px 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a:focus,
+.navigation a.actif {
+    background-color: #d35400;
+}
+
+.badge-panier {
+    display: inline-block;
+    min-width: 22px;
+    margin-left: 3px;
+    padding: 0 6px;
+    color: #2c3e50;
+    background-color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Bannière de la page d'accueil */
+.banniere {
+    padding: 65px 0;
+    color: #ffffff;
+    background-color: #34495e;
+    text-align: center;
+}
+
+.banniere h1 {
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.banniere p:not(.surtitre) {
+    max-width: 650px;
+    margin-right: auto;
+    margin-bottom: 26px;
+    margin-left: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 18px;
+    color: #ffffff;
+    background-color: #d35400;
+    border: 1px solid #d35400;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #a84300;
+    border-color: #a84300;
+}
+
+/* Catégories et cartes produits */
+.grille-categories,
+.grille-produits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.carte-categorie {
+    padding: 22px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-top: 4px solid #d35400;
+}
+
+.carte-categorie h3 {
+    color: #2c3e50;
+}
+
+.carte-categorie a,
+.lien-details {
+    font-weight: bold;
+}
+
+.carte-produit {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+}
+
+.carte-produit > img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #eeeeee;
+}
+
+.contenu-carte {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+}
+
+.contenu-carte h3 {
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.etiquette {
+    display: inline-block;
+    padding: 4px 9px;
+    color: #7b3508;
+    background-color: #f9e4d6;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.prix {
+    margin-top: auto;
+    margin-bottom: 12px;
+    color: #d35400;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.actions-carte {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.btn-ajouter {
+    font-size: 0.9rem;
+}
+
+/* En-tête intérieur et filtres */
+.entete-page {
+    margin-bottom: 32px;
+}
+
+.entete-page h1 {
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.entete-page p:last-child {
+    color: #666666;
+}
+
+.zone-filtres {
+    display: grid;
+    gap: 18px;
+    margin-bottom: 36px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #dddddd;
+}
+
+.champ-filtre label,
+.groupe-champ label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.champ-filtre input,
+.champ-filtre select,
+.groupe-champ input,
+.groupe-champ textarea {
+    width: 100%;
+    padding: 10px;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #aaaaaa;
+    border-radius: 2px;
+}
+
+.champ-filtre input:focus,
+.champ-filtre select:focus,
+.groupe-champ input:focus,
+.groupe-champ textarea:focus,
+.quantite-panier:focus,
+#quantite:focus {
+    border-color: #d35400;
+    outline: 2px solid #f4c7a9;
+}
+
+.titre-secondaire {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+/* Fiche détaillée d'un produit */
+.fil-ariane {
+    margin-bottom: 24px;
+    color: #666666;
+}
+
+.fiche-produit {
+    display: grid;
+    gap: 28px;
+}
+
+.image-produit {
+    padding: 16px;
+    background-color: #f4f4f4;
+    border: 1px solid #dddddd;
+}
+
+.image-produit img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.details-produit h1 {
+    margin: 14px 0;
+    color: #2c3e50;
+}
+
+.prix-grand {
+    font-size: 1.6rem;
+}
+
+.caracteristiques {
+    margin: 24px 0;
+    padding: 18px;
+    background-color: #f4f4f4;
+}
+
+.caracteristiques h2 {
+    font-size: 1.2rem;
+}
+
+.caracteristiques ul {
+    margin-bottom: 0;
+    padding-left: 22px;
+}
+
+.ajout-produit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.ajout-produit label {
+    font-weight: bold;
+}
+
+#quantite {
+    width: 75px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+/* Tableau et résumé du panier */
+.mise-en-page-panier {
+    display: grid;
+    gap: 28px;
+}
+
+.defilement-tableau {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    color: #ffffff;
+    background-color: #2c3e50;
+}
+
+.produit-panier {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 190px;
+}
+
+.produit-panier img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    background-color: #eeeeee;
+}
+
+.quantite-panier {
+    width: 65px;
+    padding: 7px;
+    border: 1px solid #aaaaaa;
+}
+
+.btn-supprimer {
+    padding: 7px 10px;
+    color: #9b1c1c;
+    background-color: #ffffff;
+    border: 1px solid #9b1c1c;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn-supprimer:hover,
+.btn-supprimer:focus {
+    color: #ffffff;
+    background-color: #9b1c1c;
+}
+
+.resume-panier {
+    padding: 22px;
+    background-color: #f4f4f4;
+    border: 1px solid #dddddd;
+}
+
+.resume-panier h2 {
+    color: #2c3e50;
+}
+
+.resume-panier p {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.resume-panier .total-general {
+    padding-top: 8px;
+    color: #2c3e50;
+    font-size: 1.15rem;
+}
+
+.btn-large {
+    width: 100%;
+}
+
+/* Formulaire de commande */
+.conteneur-formulaire {
+    max-width: 760px;
+}
+
+.entete-centree {
+    text-align: center;
+}
+
+.formulaire-commande {
+    padding: 22px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+}
+
+.formulaire-commande fieldset {
+    margin: 0 0 24px;
+    padding: 18px;
+    border: 1px solid #cccccc;
+}
+
+.formulaire-commande legend {
+    padding: 0 8px;
+    color: #2c3e50;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.groupe-champ {
+    margin-bottom: 16px;
+}
+
+.groupe-champ:last-child {
+    margin-bottom: 0;
+}
+
+.groupe-champ textarea {
+    resize: vertical;
+}
+
+.choix-radio {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.choix-radio:last-child {
+    margin-bottom: 0;
+}
+
+.choix-radio input {
+    margin-top: 6px;
+}
+
+.message-confirmation {
+    margin-top: 24px;
+    padding: 20px;
+    color: #255b2c;
+    background-color: #e7f3e9;
+    border: 1px solid #7aae81;
+    text-align: center;
+}
+
+/* Pied de page commun */
+.pied-page {
+    margin-top: 35px;
+    padding-top: 38px;
+    color: #ffffff;
+    background-color: #2c3e50;
+}
+
+.contenu-pied {
+    display: grid;
+    gap: 24px;
+}
+
+.contenu-pied h2,
+.contenu-pied h3 {
+    margin-bottom: 10px;
+}
+
+.contenu-pied p {
+    margin-bottom: 5px;
+    color: #e3e8eb;
+}
+
+.contenu-pied a {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.copyright {
+    margin: 30px 0 0;
+    padding: 15px;
+    background-color: #22313f;
+    text-align: center;
+}
+
+/* Mise en page pour tablettes et ordinateurs */
+@media (min-width: 768px) {
+    .barre-entete {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navigation ul {
+        margin-top: 0;
+    }
+
+    .banniere {
+        padding: 90px 0;
+    }
+
+    .banniere h1 {
+        font-size: 3rem;
+    }
+
+    .grille-categories,
+    .grille-produits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .zone-filtres {
+        grid-template-columns: 2fr 1fr;
+        align-items: end;
+    }
+
+    .fiche-produit {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .mise-en-page-panier {
+        grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+        align-items: start;
+    }
+
+    .resume-panier {
+        position: sticky;
+        top: 20px;
+    }
+
+    .formulaire-commande {
+        padding: 30px;
+    }
+
+    .contenu-pied {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grille-categories,
+    .grille-produits {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

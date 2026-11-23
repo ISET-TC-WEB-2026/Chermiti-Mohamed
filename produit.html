@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails de la perceuse sans fil 18 V vendue par DIYHome.">
+    <title>Perceuse sans fil 18 V - DIYHome</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- En-tête du site -->
+    <header class="entete">
+        <div class="conteneur barre-entete">
+            <a class="marque" href="index.html">
+                <img src="images/logo.jpg" alt="Logo DIYHome">
+                <span>DIYHome</span>
+            </a>
+            <nav class="navigation" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a class="actif" href="produits.html">Produits</a></li>
+                    <li><a href="panier.html">Panier <span id="compteur-panier" class="badge-panier">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenu-page">
+        <div class="conteneur">
+            <p class="fil-ariane"><a href="produits.html">Produits</a> / Perceuse sans fil 18 V</p>
+
+            <!-- Détails du produit -->
+            <article class="fiche-produit" data-produit-id="1">
+                <div class="image-produit">
+                    <img src="images/produit1.jpg" alt="Perceuse sans fil 18 volts avec batterie">
+                </div>
+                <div class="details-produit">
+                    <span class="etiquette">Type de travaux : Outillage</span>
+                    <h1>Perceuse sans fil 18 V</h1>
+                    <p class="prix prix-grand">189,000 DT</p>
+                    <p>Cette perceuse sans fil est pratique pour percer et visser dans le bois, le métal et les matériaux courants. Sa poignée antidérapante assure une bonne prise en main pendant les travaux.</p>
+
+                    <section class="caracteristiques">
+                        <h2>Caractéristiques techniques</h2>
+                        <ul>
+                            <li><strong>Poids :</strong> 1,5 kg avec batterie</li>
+                            <li><strong>Matière :</strong> acier et plastique renforcé</li>
+                            <li><strong>Dimensions :</strong> 22 x 8 x 24 cm</li>
+                            <li><strong>Batterie :</strong> lithium-ion 18 V</li>
+                            <li><strong>Garantie :</strong> 2 ans</li>
+                        </ul>
+                    </section>
+
+                    <div class="ajout-produit">
+                        <label for="quantite">Quantité</label>
+                        <input type="number" id="quantite" name="quantite" value="1" min="1">
+                        <button class="btn btn-ajouter" type="button" data-produit-id="1">Ajouter au panier</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="pied-page">
+        <div class="conteneur contenu-pied">
+            <div><h2>DIYHome</h2><p>Votre partenaire pour tous les travaux de la maison.</p></div>
+            <div><h3>Contact</h3><p>Tél. : +216 71 000 000</p><p>E-mail : contact@diyhome.tn</p></div>
+            <div><h3>Liens rapides</h3><a href="index.html">Accueil</a><a href="produits.html">Produits</a><a href="panier.html">Panier</a></div>
+        </div>
+        <p class="copyright">&copy; 2026 DIYHome. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

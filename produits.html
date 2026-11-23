@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catalogue de produits de bricolage DIYHome.">
+    <title>Nos produits - DIYHome</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- En-tête du site -->
+    <header class="entete">
+        <div class="conteneur barre-entete">
+            <a class="marque" href="index.html">
+                <img src="images/logo.jpg" alt="Logo DIYHome">
+                <span>DIYHome</span>
+            </a>
+            <nav class="navigation" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a class="actif" href="produits.html" aria-current="page">Produits</a></li>
+                    <li><a href="panier.html">Panier <span id="compteur-panier" class="badge-panier">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenu-page">
+        <div class="conteneur">
+            <section class="entete-page">
+                <p class="surtitre">Catalogue DIYHome</p>
+                <h1>Nos produits</h1>
+                <p>Recherchez le matériel adapté à votre prochain projet.</p>
+            </section>
+
+            <!-- Outils de recherche et de filtre -->
+            <section class="zone-filtres" aria-label="Filtres des produits">
+                <div class="champ-filtre">
+                    <label for="recherche">Rechercher un produit</label>
+                    <input type="search" id="recherche" name="recherche" placeholder="Ex. : perceuse, peinture...">
+                </div>
+                <div class="champ-filtre">
+                    <label for="categorie">Type de travaux</label>
+                    <select id="categorie" name="categorie">
+                        <option value="tous">Tous</option>
+                        <option value="outillage">Outillage</option>
+                        <option value="peinture">Peinture</option>
+                        <option value="quincaillerie">Quincaillerie</option>
+                        <option value="electricite">Électricité</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Liste des produits -->
+            <section class="section-catalogue">
+                <h2 class="titre-secondaire">Tous les articles</h2>
+                <div class="grille-produits" id="liste-produits">
+                    <article class="carte-produit" data-categorie="outillage">
+                        <img src="images/produit1.jpg" alt="Perceuse sans fil 18 volts">
+                        <div class="contenu-carte">
+                            <span class="etiquette">Outillage</span>
+                            <h3>Perceuse sans fil 18 V</h3>
+                            <p>Perceuse légère avec batterie et chargeur rapide.</p>
+                            <p class="prix">189,000 DT</p>
+                            <div class="actions-carte">
+                                <a class="lien-details" href="produit.html">Voir détails</a>
+                                <button class="btn btn-ajouter" type="button" data-produit-id="1">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="carte-produit" data-categorie="outillage">
+                        <img src="images/produit2.jpg" alt="Marteau de charpentier">
+                        <div class="contenu-carte">
+                            <span class="etiquette">Outillage</span>
+                            <h3>Marteau de charpentier</h3>
+                            <p>Marteau robuste avec manche antidérapant.</p>
+                            <p class="prix">29,900 DT</p>
+                            <div class="actions-carte">
+                                <a class="lien-details" href="produit.html">Voir détails</a>
+                                <button class="btn btn-ajouter" type="button" data-produit-id="2">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="carte-produit" data-categorie="peinture">
+                        <img src="images/produit3.jpg" alt="Pot de peinture murale blanche 5 litres">
+                        <div class="contenu-carte">
+                            <span class="etiquette">Peinture</span>
+                            <h3>Peinture murale blanche 5 L</h3>
+                            <p>Peinture mate couvrante pour murs intérieurs.</p>
+                            <p class="prix">64,900 DT</p>
+                            <div class="actions-carte">
+                                <a class="lien-details" href="produit.html">Voir détails</a>
+                                <button class="btn btn-ajouter" type="button" data-produit-id="3">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="carte-produit" data-categorie="peinture">
+                        <img src="images/produit4.jpg" alt="Lot de pinceaux de peinture">
+                        <div class="contenu-carte">
+                            <span class="etiquette">Peinture</span>
+                            <h3>Lot de 5 pinceaux</h3>
+                            <p>Plusieurs tailles pour les surfaces et les finitions.</p>
+                            <p class="prix">24,500 DT</p>
+                            <div class="actions-carte">
+                                <a class="lien-details" href="produit.html">Voir détails</a>
+                                <button class="btn btn-ajouter" type="button" data-produit-id="4">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="carte-produit" data-categorie="quincaillerie">
+                        <img src="images/produit5.jpg" alt="Boîte de vis à bois">
+                        <div class="contenu-carte">
+                            <span class="etiquette">Quincaillerie</span>
+                            <h3>Boîte de vis à bois</h3>
+                            <p>Boîte de 200 vis zinguées de différentes tailles.</p>
+                            <p class="prix">18,500 DT</p>
+                            <div class="actions-carte">
+                                <a class="lien-details" href="produit.html">Voir détails</a>
+                                <button class="btn btn-ajouter" type="button" data-produit-id="5">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="carte-produit" data-categorie="electricite">
+                        <img src="images/produit6.jpg" alt="Jeu de tournevis isolés">
+                        <div class="contenu-carte">
+                            <span class="etiquette">Électricité</span>
+                            <h3>Jeu de tournevis isolés</h3>
+                            <p>Six tournevis isolés pour les travaux électriques.</p>
+                            <p class="prix">46,000 DT</p>
+                            <div class="actions-carte">
+                                <a class="lien-details" href="produit.html">Voir détails</a>
+                                <button class="btn btn-ajouter" type="button" data-produit-id="6">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="carte-produit" data-categorie="electricite">
+                        <img src="images/produit7.jpg" alt="Ruban adhésif isolant noir">
+                        <div class="contenu-carte">
+                            <span class="etiquette">Électricité</span>
+                            <h3>Ruban adhésif isolant</h3>
+                            <p>Ruban souple et résistant pour protéger les câbles.</p>
+                            <p class="prix">6,800 DT</p>
+                            <div class="actions-carte">
+                                <a class="lien-details" href="produit.html">Voir détails</a>
+                                <button class="btn btn-ajouter" type="button" data-produit-id="7">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="carte-produit" data-categorie="outillage">
+                        <img src="images/produit8.jpg" alt="Clé à molette 250 millimètres">
+                        <div class="contenu-carte">
+                            <span class="etiquette">Outillage</span>
+                            <h3>Clé à molette 250 mm</h3>
+                            <p>Clé réglable en acier pour écrous et raccords.</p>
+                            <p class="prix">32,000 DT</p>
+                            <div class="actions-carte">
+                                <a class="lien-details" href="produit.html">Voir détails</a>
+                                <button class="btn btn-ajouter" type="button" data-produit-id="8">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="pied-page">
+        <div class="conteneur contenu-pied">
+            <div><h2>DIYHome</h2><p>Votre partenaire pour tous les travaux de la maison.</p></div>
+            <div><h3>Contact</h3><p>Tél. : +216 71 000 000</p><p>E-mail : contact@diyhome.tn</p></div>
+            <div><h3>Liens rapides</h3><a href="index.html">Accueil</a><a href="produits.html">Produits</a><a href="panier.html">Panier</a></div>
+        </div>
+        <p class="copyright">&copy; 2026 DIYHome. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

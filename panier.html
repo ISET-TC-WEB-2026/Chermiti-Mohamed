@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Votre panier d'achats DIYHome.">
+    <title>Votre panier - DIYHome</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- En-tête du site -->
+    <header class="entete">
+        <div class="conteneur barre-entete">
+            <a class="marque" href="index.html">
+                <img src="images/logo.jpg" alt="Logo DIYHome">
+                <span>DIYHome</span>
+            </a>
+            <nav class="navigation" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="produits.html">Produits</a></li>
+                    <li><a class="actif" href="panier.html" aria-current="page">Panier <span id="compteur-panier" class="badge-panier">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenu-page">
+        <div class="conteneur">
+            <section class="entete-page">
+                <p class="surtitre">Vos achats</p>
+                <h1>Votre panier</h1>
+                <p>Vérifiez vos articles avant de passer la commande.</p>
+            </section>
+
+            <!-- Articles présents dans le panier -->
+            <div class="mise-en-page-panier">
+                <section class="tableau-panier" aria-labelledby="titre-articles">
+                    <h2 id="titre-articles" class="titre-secondaire">Articles</h2>
+                    <div class="defilement-tableau">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Produit</th>
+                                    <th scope="col">Prix unitaire</th>
+                                    <th scope="col">Quantité</th>
+                                    <th scope="col">Total ligne</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="articles-panier">
+                                <tr data-produit-id="1">
+                                    <td><div class="produit-panier"><img src="images/produit1.jpg" alt=""><span>Perceuse sans fil 18 V</span></div></td>
+                                    <td>189,000 DT</td>
+                                    <td><input class="quantite-panier" type="number" value="1" min="1" aria-label="Quantité de la perceuse"></td>
+                                    <td>189,000 DT</td>
+                                    <td><button class="btn-supprimer" type="button">Supprimer</button></td>
+                                </tr>
+                                <tr data-produit-id="5">
+                                    <td><div class="produit-panier"><img src="images/produit5.jpg" alt=""><span>Boîte de vis à bois</span></div></td>
+                                    <td>18,500 DT</td>
+                                    <td><input class="quantite-panier" type="number" value="2" min="1" aria-label="Quantité des boîtes de vis"></td>
+                                    <td>37,000 DT</td>
+                                    <td><button class="btn-supprimer" type="button">Supprimer</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Résumé des montants -->
+                <aside class="resume-panier">
+                    <h2>Résumé</h2>
+                    <p><span>Sous-total</span><strong id="sous-total">226,000 DT</strong></p>
+                    <p><span>Frais de livraison</span><strong id="frais-livraison">8,000 DT</strong></p>
+                    <p class="total-general"><span>Total général</span><strong id="total-general">234,000 DT</strong></p>
+                    <a class="btn btn-large" href="commande.html">Passer la commande</a>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="pied-page">
+        <div class="conteneur contenu-pied">
+            <div><h2>DIYHome</h2><p>Votre partenaire pour tous les travaux de la maison.</p></div>
+            <div><h3>Contact</h3><p>Tél. : +216 71 000 000</p><p>E-mail : contact@diyhome.tn</p></div>
+            <div><h3>Liens rapides</h3><a href="index.html">Accueil</a><a href="produits.html">Produits</a><a href="panier.html">Panier</a></div>
+        </div>
+        <p class="copyright">&copy; 2026 DIYHome. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
